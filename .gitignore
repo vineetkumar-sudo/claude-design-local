@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursor/
+
+# Node (in case anyone bolts a build step on later)
+node_modules/
+dist/
+build/
+.next/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local scratch / experiments
+scratch/
+*.local
+
+# Test prototypes generated during plugin development
+smoke-test/
+test-proto*/

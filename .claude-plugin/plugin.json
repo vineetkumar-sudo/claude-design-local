@@ -1,0 +1,50 @@
+{
+  "name": "claude-design-local",
+  "version": "0.2.0",
+  "description": "Local equivalent of Anthropic's Claude Design research preview. Ships a pluggable design-system folder, a generic prototype starter, and skills + slash commands for both using existing systems and authoring new ones — so teams can iterate themed prototypes in Claude Code without weekly credit caps and without being locked into a single brand.",
+  "author": {
+    "name": "Polymathai",
+    "email": "engineering@polymathai.co",
+    "url": "https://polymathai.co"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "design-system",
+    "prototype",
+    "ui",
+    "tailwind",
+    "branding",
+    "theming"
+  ],
+  "skills": [
+    {
+      "name": "design-system",
+      "path": "skills/design-system/SKILL.md"
+    },
+    {
+      "name": "design-system-author",
+      "path": "skills/design-system-author/SKILL.md"
+    }
+  ],
+  "commands": [
+    {
+      "name": "new-prototype",
+      "path": "commands/new-prototype.md"
+    },
+    {
+      "name": "new-design-system",
+      "path": "commands/new-design-system.md"
+    }
+  ],
+  "templates": [
+    {
+      "name": "prototype-starter",
+      "path": "templates/prototype-starter",
+      "description": "Generic HTML/Tailwind prototype starter. Combined with any design system under design-systems/ via scripts/new-prototype.sh."
+    }
+  ],
+  "designSystems": {
+    "path": "design-systems",
+    "description": "Folder containing all shipped design systems. Each subfolder is one system (slug = folder name) and must satisfy the contract in design-systems/README.md."
+  }
+}

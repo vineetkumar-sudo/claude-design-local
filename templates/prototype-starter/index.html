@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prototype starter</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="design-system/tokens.css" />
+    <script src="design-system/tailwind-bridge.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root { --font-mulish: 'Mulish'; }
+    </style>
+  </head>
+  <body class="bg-background text-foreground min-h-screen">
+    <header class="border-b border-border bg-header text-header-foreground">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary text-primary-foreground flex items-center justify-center font-bold">P</span>
+          <span class="font-semibold">Prototype</span>
+        </div>
+        <button
+          id="theme-toggle"
+          class="tap-active rounded-md border border-border bg-card text-card-foreground px-3 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground transition"
+        >
+          Toggle theme
+        </button>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-16">
+      <section class="text-center mb-12">
+        <p class="text-muted-foreground uppercase tracking-wide text-xs font-semibold mb-3">
+          claude-design-local
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+          Hello from your prototype starter
+        </h1>
+        <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
+          Tokens are loaded, Tailwind is wired up, dark mode works. Open this folder in
+          Claude Code and start prompting — every page you generate will inherit this brand.
+        </p>
+        <div class="flex items-center justify-center gap-3 mt-8">
+          <button class="tap-active bg-primary text-primary-foreground rounded-lg px-5 py-2.5 font-medium hover:opacity-90 transition">
+            Primary action
+          </button>
+          <button class="tap-active bg-secondary text-secondary-foreground rounded-lg px-5 py-2.5 font-medium hover:bg-accent transition">
+            Secondary
+          </button>
+        </div>
+      </section>
+
+      <!--
+        Brand-families demo. The classes below assume the chosen design system
+        defines `purple`, `amber`, `blue`, `emerald`, `pink`, `teal` families with
+        `subtle`, `muted`, `vivid` shades (the Polymath layout). If you copied a
+        system that uses different family names, replace this block with whatever
+        families *that* system defines — see `design-system/README.md`.
+      -->
+      <section>
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-muted-foreground mb-4">
+          Brand families
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div class="rounded-xl p-4 bg-purple-subtle border border-purple-muted">
+            <div class="w-6 h-6 rounded-md bg-purple-vivid mb-3"></div>
+            <div class="text-sm font-semibold text-foreground">Purple</div>
+            <div class="text-xs text-muted-foreground">curiosity</div>
+          </div>
+          <div class="rounded-xl p-4 bg-amber-subtle border border-amber-muted">
+            <div class="w-6 h-6 rounded-md bg-amber-vivid mb-3"></div>
+            <div class="text-sm font-semibold text-foreground">Amber</div>
+            <div class="text-xs text-muted-foreground">warmth</div>
+          </div>
+          <div class="rounded-xl p-4 bg-blue-subtle border border-blue-muted">
+            <div class="w-6 h-6 rounded-md bg-blue-vivid mb-3"></div>
+            <div class="text-sm font-semibold text-foreground">Blue</div>
+            <div class="text-xs text-muted-foreground">focus</div>
+          </div>
+          <div class="rounded-xl p-4 bg-emerald-subtle border border-emerald-muted">
+            <div class="w-6 h-6 rounded-md bg-emerald-vivid mb-3"></div>
+            <div class="text-sm font-semibold text-foreground">Emerald</div>
+            <div class="text-xs text-muted-foreground">growth</div>
+          </div>
+          <div class="rounded-xl p-4 bg-pink-subtle border border-pink-muted">
+            <div class="w-6 h-6 rounded-md bg-pink-vivid mb-3"></div>
+            <div class="text-sm font-semibold text-foreground">Pink</div>
+            <div class="text-xs text-muted-foreground">play</div>
+          </div>
+          <div class="rounded-xl p-4 bg-teal-subtle border border-teal-muted">
+            <div class="w-6 h-6 rounded-md bg-teal-vivid mb-3"></div>
+            <div class="text-sm font-semibold text-foreground">Teal</div>
+            <div class="text-xs text-muted-foreground">balance</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="max-w-5xl mx-auto px-6 pb-10 text-center text-muted-foreground text-sm">
+      Edit <code class="bg-muted px-1.5 py-0.5 rounded">index.html</code> or ask Claude
+      to rebuild it. The browser is served from
+      <code class="bg-muted px-1.5 py-0.5 rounded">http://localhost:8000</code>.
+    </footer>
+
+    <script>
+      // Dark-mode toggle, persisted to localStorage.
+      const STORAGE_KEY = 'proto:theme';
+      const root = document.documentElement;
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored === 'dark') root.classList.add('dark');
+
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        root.classList.toggle('dark');
+        localStorage.setItem(
+          STORAGE_KEY,
+          root.classList.contains('dark') ? 'dark' : 'light'
+        );
+      });
+    </script>
+  </body>
+</html>
