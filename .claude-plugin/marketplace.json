@@ -1,0 +1,32 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-design-local",
+  "description": "Local equivalent of Anthropic's Claude Design research preview — themed HTML/Tailwind prototypes against any design system, no weekly credit cap.",
+  "owner": {
+    "name": "Polymathai",
+    "email": "engineering@polymathai.co",
+    "url": "https://polymathai.co"
+  },
+  "plugins": [
+    {
+      "name": "claude-design-local",
+      "description": "Pluggable design-system folder, generic prototype starter, and skills + slash commands for both using existing systems and authoring new ones.",
+      "author": {
+        "name": "Polymathai",
+        "email": "engineering@polymathai.co",
+        "url": "https://polymathai.co"
+      },
+      "category": "design",
+      "source": "./",
+      "homepage": "https://github.com/vineetkumar-sudo/claude-design-local",
+      "keywords": [
+        "design-system",
+        "prototype",
+        "ui",
+        "tailwind",
+        "branding",
+        "theming"
+      ]
+    }
+  ]
+}
