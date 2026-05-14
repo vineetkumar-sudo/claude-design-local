@@ -15,36 +15,5 @@
     "tailwind",
     "branding",
     "theming"
-  ],
-  "skills": [
-    {
-      "name": "design-system",
-      "path": "skills/design-system/SKILL.md"
-    },
-    {
-      "name": "design-system-author",
-      "path": "skills/design-system-author/SKILL.md"
-    }
-  ],
-  "commands": [
-    {
-      "name": "new-prototype",
-      "path": "commands/new-prototype.md"
-    },
-    {
-      "name": "new-design-system",
-      "path": "commands/new-design-system.md"
-    }
-  ],
-  "templates": [
-    {
-      "name": "prototype-starter",
-      "path": "templates/prototype-starter",
-      "description": "Generic HTML/Tailwind prototype starter. Combined with any design system under design-systems/ via scripts/new-prototype.sh."
-    }
-  ],
-  "designSystems": {
-    "path": "design-systems",
-    "description": "Folder containing all shipped design systems. Each subfolder is one system (slug = folder name) and must satisfy the contract in design-systems/README.md."
-  }
+  ]
 }
