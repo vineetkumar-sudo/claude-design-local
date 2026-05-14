@@ -20,7 +20,7 @@ What you give up vs. hosted Claude Design: no in-canvas "Tweaks" knobs panel, no
 ## Quick start
 
 ```bash
-git clone https://github.com/polymathai/claude-design-local ~/.claude/plugins/claude-design-local
+git clone https://github.com/vineetkumar-sudo/claude-design-local ~/.claude/plugins/claude-design-local
 ```
 
 Restart Claude Code. That's it — the two skills (`design-system`, `design-system-author`) and two slash commands (`/new-prototype`, `/new-design-system`) are now available everywhere.
@@ -32,7 +32,7 @@ Prerequisites: `claude` (Claude Code CLI), `python3` (any 3.x), `git`.
 ### Option A — clone, then symlink (preferred if you also want to edit the plugin)
 
 ```bash
-git clone https://github.com/polymathai/claude-design-local ~/dev/claude-design-local
+git clone https://github.com/vineetkumar-sudo/claude-design-local ~/dev/claude-design-local
 ln -s ~/dev/claude-design-local ~/.claude/plugins/claude-design-local
 ```
 
@@ -40,7 +40,7 @@ This keeps the source somewhere you'll work in, and the symlink registers it wit
 
 ### Option B — Claude Code plugin install flow
 
-If your version of Claude Code exposes a marketplace/install flow that takes a Git URL, point it at `https://github.com/polymathai/claude-design-local`. The manifest at `.claude-plugin/plugin.json` is what it reads.
+If your version of Claude Code exposes a marketplace/install flow that takes a Git URL, point it at `https://github.com/vineetkumar-sudo/claude-design-local`. The manifest at `.claude-plugin/plugin.json` is what it reads.
 
 ### Staying up to date
 
